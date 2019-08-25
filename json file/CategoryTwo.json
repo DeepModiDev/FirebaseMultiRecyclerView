@@ -1,0 +1,108 @@
+{
+  "Category": {
+    "01": {
+      "categoryName": "user1",
+      "categoryId": "01",
+      "data": {
+        "01": {
+          "dataId": "01",
+          "dataName": "deep modi",
+          "dataAge": "18"
+        },
+        "02": {
+          "dataId": "02",
+          "dataName": "dee modi",
+          "dataAge": "19"
+        },
+        "03": {
+          "dataId": "03",
+          "dataName": "de modi",
+          "dataAge": "20"
+        },
+        "04": {
+          "dataId": "04",
+          "dataName": "d modi",
+          "dataAge": "21"
+        }
+      }
+    },
+    "02": {
+      "categoryName": "user2",
+      "categoryId": "02",
+      "data": {
+        "01": {
+          "dataId": "01",
+          "dataName": "deep patel",
+          "dataAge": "22"
+        },
+        "02": {
+          "dataId": "02",
+          "dataName": "dee patel",
+          "dataAge": "23"
+        },
+        "03": {
+          "dataId": "03",
+          "dataName": "de patel",
+          "dataAge": "24"
+        },
+        "04": {
+          "dataId": "04",
+          "dataName": "d patel",
+          "dataAge": "25"
+        }
+      }
+    },
+    "03": {
+      "categoryName": "user3",
+      "categoryId": "03",
+      "data": {
+        "01": {
+          "dataId": "01",
+          "dataName": "dee patel",
+          "dataAge": "28"
+        },
+        "02": {
+          "dataId": "02",
+          "dataName": "de patel",
+          "dataAge": "29"
+        },
+        "03": {
+          "dataId": "03",
+          "dataName": "d9 patel",
+          "dataAge": "30"
+        },
+        "04": {
+          "dataId": "04",
+          "dataName": "ff patel",
+          "dataAge": "34"
+        }
+      }
+    },
+    "04": {
+      "categoryName": "user4",
+      "categoryId": "04",
+      "data": {
+        "01": {
+          "dataId": "01",
+          "dataName": "bggb patel",
+          "dataAge": "22"
+        },
+        "02": {
+          "dataId": "02",
+          "dataName": "bgbg patel",
+          "dataAge": "23"
+        },
+        "03": {
+          "dataId": "03",
+          "dataName": "kkjhg patel",
+          "dataAge": "24"
+        },
+        "04": {
+          "dataId": "04",
+          "dataName": "dff patel",
+          "dataAge": "25"
+        }
+      }
+    }
+  }
+}
