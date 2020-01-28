@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.deepmodi.firebasemultirecyclerview.Interface.SubCategoryOnClickInterface;
 import com.deepmodi.firebasemultirecyclerview.Model.Category;
 import com.deepmodi.firebasemultirecyclerview.Model.CategoryTwo;
 import com.deepmodi.firebasemultirecyclerview.ViewHolder.CategoryTwoViewHolder;
@@ -58,10 +60,20 @@ public class MainActivity extends AppCompatActivity {
 
                 adapter2 = new FirebaseRecyclerAdapter<CategoryTwo, CategoryTwoViewHolder>(options2) {
                     @Override
-                    protected void onBindViewHolder(@NonNull CategoryTwoViewHolder categoryTwoViewHolder, int i, @NonNull CategoryTwo categoryTwo) {
+                    protected void onBindViewHolder(@NonNull CategoryTwoViewHolder categoryTwoViewHolder, int i, @NonNull final CategoryTwo categoryTwo) {
                         categoryTwoViewHolder.dataId.setText(categoryTwo.getDataId());
                         categoryTwoViewHolder.dataName.setText(categoryTwo.getDataName());
                         categoryTwoViewHolder.dataAge.setText(categoryTwo.getDataAge());
+                        categoryTwoViewHolder.SubCategoryInterfaceClick(new SubCategoryOnClickInterface() {
+                            @Override
+                            public void onClick(View view, boolean isLongPressed) {
+                                Intent intent = new Intent(MainActivity.this,SimpleDisplayActivity.class);
+                                intent.putExtra("userId",categoryTwo.getDataId());
+                                intent.putExtra("userName",categoryTwo.getDataName());
+                                intent.putExtra("userAge",categoryTwo.getDataAge());
+                                startActivity(intent);
+                            }
+                        });
                     }
 
                     @NonNull
