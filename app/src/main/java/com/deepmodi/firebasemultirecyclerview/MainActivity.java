@@ -10,10 +10,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.deepmodi.firebasemultirecyclerview.Interface.SubCategoryOnClickInterface;
 import com.deepmodi.firebasemultirecyclerview.Model.Category;
 import com.deepmodi.firebasemultirecyclerview.Model.CategoryTwo;
+import com.deepmodi.firebasemultirecyclerview.Model.UploadItem;
 import com.deepmodi.firebasemultirecyclerview.ViewHolder.CategoryTwoViewHolder;
 import com.deepmodi.firebasemultirecyclerview.ViewHolder.CategoryViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -24,7 +26,6 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-
     FirebaseDatabase database;
     DatabaseReference reference;
 
@@ -32,10 +33,21 @@ public class MainActivity extends AppCompatActivity {
     FirebaseRecyclerAdapter<CategoryTwo, CategoryTwoViewHolder> adapter2;
     RecyclerView.LayoutManager manager;
 
+    Button btn_add_item;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn_add_item = findViewById(R.id.btn_add_item);
+        btn_add_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UploadActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //firebase init
         database = FirebaseDatabase.getInstance();

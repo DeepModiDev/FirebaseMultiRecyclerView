@@ -17,4 +17,17 @@
        app:layout_constraintTop_toTopOf="parent">
 
    </androidx.recyclerview.widget.RecyclerView>
+
+   <Button
+       android:id="@+id/btn_add_item"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:drawableLeft="@android:drawable/ic_input_add"
+       android:text="Add Item"
+       android:layout_margin="10dp"
+       android:background="#123"
+       android:textColor="#FFF"
+       android:padding="10dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
